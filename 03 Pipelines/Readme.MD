@@ -12,7 +12,7 @@ You can run the bicep configuration with a github action pipeline really easily.
 To create an azure service principal, you need to run the following command:
 
 ```powershell
-az ad sp create-for-rbac --name "BicepPipeline" --role contributor --scopes /subscriptions/<SUBSCRIPTION_ID> --sdk-auth
+az ad sp create-for-rbac --name "BicepPipeline" --role contributor --scopes /subscriptions/<SUBSCRIPTION_ID>
 ```
 
 This command will return a json object with the following structure:
@@ -82,7 +82,7 @@ Create a bicep.yml file in your .github/workflows folder and replace the content
 
 ```yaml
 
-on: [push]
+on: workflow_dispatch
 name: Azure ARM
 jobs:
   build-and-deploy:
