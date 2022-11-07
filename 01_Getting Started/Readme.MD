@@ -36,7 +36,7 @@ This code will create a storage account in the resource group where the bicep fi
 The next thing you need to do is to deploy the resources. To do this, you need to run the following command:
 
 ```powershell
-$resourceGroupName = 'RG-BicepTest'
+$resourceGroupName = 'RG-BicepDemo'
 az group create --name $resourceGroupName --location westeurope
 az deployment group create --resource-group $resourceGroupName --template-file main.bicep
 ```

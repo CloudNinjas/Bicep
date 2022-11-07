@@ -32,7 +32,7 @@ This command will return a json object with the following structure:
 1. In Github, navigate to your repository. 
 2. Select Security > Secrets and variables > Actions > New repository secret.
 3. Paste the entire JSON output from the Azure CLI command into the secret's value field. Name the secret AZURE_CREDENTIALS.
-4. Create another secret named AZURE_RG. Add the name of your resource group to the secret's value field ('RG-BicepTest').
+4. Create another secret named AZURE_RG. Add the name of your resource group to the secret's value field ('RG-BicepDemo').
 5. Create another secret named AZURE_SUBSCRIPTION. Add your subscription ID to the secret's value field (example: 90fd3f9d-4c61-432d-99ba-1273f236afa2).
 
 ## Add Bicep file to Repository
@@ -117,5 +117,5 @@ Commit your code, go to Actions and trigger your workflow! Make sure you created
 To delete the resource group, run the following command:
 
 ```powershell
-az group delete --name RG-BicepTest
+az group delete --name RG-BicepDemo
 ```
