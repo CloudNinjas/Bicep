@@ -21,10 +21,12 @@ Bicep is a **new** language that is:
 You can get started by installing the Bicep CLI and VS Code extension. 
 You can install the Bicep CLI by running the following command:
 
+**Bash:**
 ```bash 
 npm install -g @azure/bicep
 ```
 
+**Powershell**
 ```Powershell
 Install-Module -Name Bicep -Scope CurrentUser
 ```
@@ -32,3 +34,8 @@ Install-Module -Name Bicep -Scope CurrentUser
 You can install the Bicep VS Code extension by searching for "Bicep" in the VS Code Extensions Marketplace.
 
 You can also try Bicep in the [Bicep Playground](https://aka.ms/bicepdemo).
+
+
+## Documentation
+
+You can find the full documentation for Bicep [here](https://aka.ms/bicepdocs).
