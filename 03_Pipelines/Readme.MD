@@ -110,4 +110,12 @@ jobs:
 
 ## Commit and push your code
 
-Commit your code and see the magic happening :) 
+Commit your code, go to Actions and trigger your workflow! Make sure you created the Resource group that you are using in the secrets.
+
+## Cleanup
+
+To delete the resource group, run the following command:
+
+```powershell
+az group delete --name RG-BicepTest
+```
