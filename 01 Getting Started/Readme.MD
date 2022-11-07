@@ -20,13 +20,16 @@ resource storageAccount 'Microsoft.Storage/storageAccounts@2021-04-01' = {
     minimumTlsVersion: 'TLS1_2'
   }
 }
+
+output storageAccountEndpoint string = storageAccount.properties.primaryEndpoints.blob
 ```
 
-This code will create a storage account in the resource group where the bicep file is deployed. The code is divided into three parts:
+This code will create a storage account in the resource group where the bicep file is deployed. The code is divided into four parts:
 
 - Parameters
 - Variables
 - Resources
+- Outputs
 
 ## Deploy Resources
 
@@ -34,8 +37,8 @@ The next thing you need to do is to deploy the resources. To do this, you need t
 
 ```powershell
 $resourceGroupName = 'RG-BicepTest'
-az group create --name myResourceGroup --location westeurope
-az deployment group create --resource-group myResourceGroup --template-file main.bicep
+az group create --name $resourceGroupName --location westeurope
+az deployment group create --resource-group $resourceGroupName --template-file main.bicep
 ```
 
 ## Delete Resources
@@ -43,5 +46,5 @@ az deployment group create --resource-group myResourceGroup --template-file main
 To delete the resources, you need to run the following command:
 
 ```powershell
-az group delete --name myResourceGroup
+az group delete --name $resourceGroupName
 ```
