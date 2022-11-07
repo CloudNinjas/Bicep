@@ -10,3 +10,5 @@ resource storageaccount 'Microsoft.Storage/storageAccounts@2022-05-01' = {
     name: storageAccountType
   }
 }
+
+output sku string = storageaccount.sku.tier
