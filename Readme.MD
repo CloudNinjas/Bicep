@@ -1,5 +1,37 @@
 # Bicep
 
+## Setup
+
+Setup you environment
+
+## Git {.tabset .tabset-fade}
+
+Setup Git   
+
+### Windows
+```windows
+winget install --id=Git.Git
+```
+### Linux
+```bash
+sudo apt install git
+```
+
+## Azure CLI {.tabset .tabset-fade}
+
+Setup Azure CLI
+
+### Azure CLI for Windows
+```windows
+winget install --id=Microsoft.AzureCLI
+```
+
+### Azure CLI for Linux
+```bash
+curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+```
+
+
 ## What is Bicep?
 
 Bicep is a Domain Specific Language (DSL) for deploying Azure resources declaratively. It aims to drastically simplify the authoring experience with a cleaner syntax, improved type safety, and better support for modularity and code re-use.
